@@ -1,15 +1,24 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Main from "./pages/Main";
-import Conversor from "./pages/conversor";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import Blog from './pages/Blog';
+import Contato from './pages/Contato';
+import Funcao from './pages/Funcao';
+import Conversor from './pages/conversor';
 
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Main />} />
-        {/* Você pode adicionar outras rotas aqui no futuro */}
-        <Route path="/conversor" element={<Conversor />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="contato" element={<Contato />} />
+          <Route path="conversor" element={<Conversor />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
 }
+
+export default App;
