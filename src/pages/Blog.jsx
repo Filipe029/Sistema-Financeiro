@@ -1,29 +1,32 @@
 import React from 'react';
 import { Box, Typography, Container} from '@mui/material';
 import BlogCard from '../components/BlogCard';
+import imagem1 from '../assets/imgBlog/imagem1.jpeg';
+import imagem2 from '../assets/imgBlog/imagem2.jpeg';
+import imagem3 from '../assets/imgBlog/imagem3.jpeg';
+import imagem4 from '../assets/imgBlog/imagem4.jpeg';
 
 const posts = [
     {
         id: 1,
         titulo: 'O que é Câmbio e por que ele é importante?',
         
-        resumo: 'Entenda o que é câmbio e como ele influencia a economia.',
+        resumo: 'Entenda o que é câmbio, como ele funciona e por que é tão importante para o comércio internacional, viagens e investimentos.',
 
-        texto: 'O câmbio representa a troca entre moedas diferentes como Real, Dólar, Euro. Ele é muito utilizado em viagens internacionais, comércio exterior e investimentos. O valor do câmbio é determinado por diversos fatores, como oferta e demanda, taxas de juros, inflação e estabilidade econômica. O câmbio é importante porque afeta o custo de produtos importados, a competitividade das exportações e o poder de compra dos consumidores. Além disso, o câmbio pode influenciar a inflação e o crescimento econômico de um país.',
+        texto: 'O câmbio é a troca entre moedas de diferentes países, como Real, Dólar e Euro. Ele é muito utilizado em viagens internacionais, compras online e investimentos. As taxas de câmbio determinam quanto uma moeda vale em relação à outra e influenciam diretamente a economia mundial.',
         
-        imagem: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a'
-    
+        imagem: imagem1
     },
 
     {
         id: 2,
-        titulo: 'Como o funciona a conversão de moedas?',
+        titulo: 'Como funciona a conversão de moedas?',
         
-        resumo: 'Veja como as taxas de câmbio são aplicadas.',
+        resumo: 'Veja como as taxas de câmbio são aplicadas na conversão de moedas e como o sistema calcula o valor final de forma simples.',
 
-        texto: 'A conversão de moedas funciona através das traxas qeu representam o valor de uma moeda em relação à outra. O usuário informa um valor e escolha as moedas desejadas.',
-
-        imagem: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e'
+        texto: 'A conversão de moedas funciona através de taxas que representam o valor de uma moeda em comparação com outra. O usuário informa um valor, escolhe as moedas desejadas e o sistema realiza o cálculo automaticamente para mostrar o resultado convertido.',
+        
+        imagem: imagem2
     },
 
     {
@@ -31,11 +34,23 @@ const posts = [
 
         titulo: 'Por que os valores das moedas mudam?',
 
-        resumo: 'Descubra os fatores que influenciam a economia.',
+        resumo: 'Descubra os principais fatores que influenciam a variação das moedas, como economia, política, inflação e taxas de juros.',
 
-        texto: 'Os valores das moedas variam devido a fatores econômicos e políticos como inflação, juros, exportações e estabilidade internacional.',
+        texto: 'O valor das moedas varia por diversos fatores econômicos e políticos, como inflação, taxas de juros, comércio internacional e estabilidade do país. Essas mudanças podem aumentar ou diminuir o poder de compra de uma moeda.',
+        
+        imagem: imagem3
+    },
 
-        imagem: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3'
+    {
+        id: 4,
+        
+        titulo: 'Principais moedas do mundo.',  
+
+        resumo: 'Conheça as moedas mais utilizadas no mundo, como Dólar (USD), Euro (EUR) e Real (BRL), e sua importância no cenário global.',
+        
+        texto: 'Entre as moedas mais utilizadas no mundo estão o Dólar (USD), o Euro (EUR) e o Real (BRL). Essas moedas são importantes para o comércio internacional, turismo e investimentos financeiros realizados entre diferentes países.',
+        
+        imagem: imagem4
     }
 ];
 
@@ -46,7 +61,7 @@ export default function Blog() {
             sx={{
                 minHeight: '88vh',
                 py: 6,
-                background: 'linear-gradient(to right, #120c24, #1c1238)',
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a')`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundAttachment: {

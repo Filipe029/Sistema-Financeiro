@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
@@ -28,8 +27,8 @@ export default function BlogCard({
         width: 260,
         borderRadius: 1,
         boxShadow: 4,
-        backgroundColor: '#ffffff',
-        color: '#000000',
+        backgroundColor: '#3b2a5a',
+        color: '#ffffff',
         display: 'flex',
         flexDirection: 'column',
         alignSelf: 'flex-start'
@@ -48,13 +47,14 @@ export default function BlogCard({
         <Typography
           variant="h6"
           sx={{
-            flexGrow: 1
+            flexWeight: 'bold',
+            mb: 2
           }}
         >
           {titulo}
         </Typography>
 
-        <Typography variant="body2">
+        <Typography variant="body2" sx={{ textAlign: 'justify', lineHeight: 1.9}}>
           {resumo}
         </Typography>
 
@@ -68,7 +68,14 @@ export default function BlogCard({
 
         <CardContent>
 
-            <Typography variant="body2">
+            <Typography
+                variant="body2"
+                sx={{
+                  textAlign: 'justify',
+                  lineHeight: 1.8,
+                  color: '#ffffff'
+                }}
+                >
                 {texto}
             </Typography>
 
@@ -89,7 +96,7 @@ export default function BlogCard({
             onClick={handleExpandClick}
             sx={{
                 ml: 1,
-                color: '#1976d2',
+                color: '#f1f1f1',
                 fontWeight: 'bold',
                 cursor: 'pointer',
                 userSelect: 'none'
