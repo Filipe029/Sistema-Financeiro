@@ -23,8 +23,7 @@ export default function Home() {
 
         <Box
           sx={{
-            bgcolor: "#3c3767",
-            color: "white",
+            bgcolor: 'background.paper',
             textAlign: "center",
             py: 10,
           }}

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AppBar, Toolbar, Typography, Drawer, List, ListItem, ListItemText, Box } from '@mui/material';
+import { AppBar, Toolbar, Typography, Drawer, List, ListItem, ListItemText, Box, Button } from '@mui/material';
 import { Link, Outlet } from 'react-router-dom';
 
 export default function Layout() {
@@ -15,11 +15,28 @@ export default function Layout() {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
       {/* CABEÇALHO */}
-      <AppBar position="static" className="cabecalho">
+      <AppBar position="static" sx={{ backgroundColor: 'background.paper' }}>
         <Toolbar>
-          <Typography variant="h6" onClick={() => setOpen(true)}>
-            ☰ Sistema Financeiro
+          <Typography variant="h6" onClick={() => setOpen(true)} sx={{ cursor: 'pointer' }}>
+            ☰ MENU
           </Typography>
+          
+          {/* Espaçador para empurrar os botões para a direita */}
+          <Box sx={{ flexGrow: 1 }} />
+
+          {/* Botões do Menu (escondidos no mobile, visíveis em telas médias e grandes) */}
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
+            {menuItems.map((item) => (
+              <Button 
+                key={item.text} 
+                component={Link} 
+                to={item.path} 
+                sx={{ color: '#ffffff', border: 2 }}
+              >
+                {item.text}
+              </Button>
+            ))}
+          </Box>
         </Toolbar>
       </AppBar>
 
