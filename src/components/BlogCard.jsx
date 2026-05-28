@@ -25,13 +25,17 @@ export default function BlogCard({
     <Card
       sx={{
         width: 260,
-        borderRadius: 1,
-        boxShadow: 4,
-        backgroundColor: '#3b2a5a',
-        color: '#ffffff',
+        borderRadius: 2,
+        backgroundColor: '#ffffff',
+        color: '#1a1a1a',
+        boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
         display: 'flex',
         flexDirection: 'column',
-        alignSelf: 'flex-start'
+        transition: '0.3s',
+            '&:hover': {
+          transform: 'translateY(-5px)',
+          boxShadow: '0 12px 32px rgba(0,0,0,0.3)'
+          }
       }}
     >
 
@@ -73,7 +77,7 @@ export default function BlogCard({
                 sx={{
                   textAlign: 'justify',
                   lineHeight: 1.8,
-                  color: '#ffffff'
+                  color: '#000000',
                 }}
                 >
                 {texto}
@@ -96,7 +100,7 @@ export default function BlogCard({
             onClick={handleExpandClick}
             sx={{
                 ml: 1,
-                color: '#f1f1f1',
+                color: '#085dfc',
                 fontWeight: 'bold',
                 cursor: 'pointer',
                 userSelect: 'none'

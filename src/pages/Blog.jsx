@@ -61,7 +61,7 @@ export default function Blog() {
             sx={{
                 minHeight: '88vh',
                 py: 6,
-                backgroundImage: `linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a')`,
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a')`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundAttachment: {
